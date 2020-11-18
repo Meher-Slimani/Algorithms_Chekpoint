@@ -1,0 +1,36 @@
+ALGORITHM Sentence
+VAR
+   sentenceLength: INTEGER:=0;
+   wordsNumber: INTEGER:=0;
+   vowelsNumber: INTEGER:=0;
+   sentence: STRING;
+   character: CHAR;
+BEGIN
+    Read(sentence);
+   FOR sentenceLength FROM 1 TO sentence.length STEP 1  DO
+       SWITCH (character) DO
+       case "a" : vowelsNumber ++;
+       Break;
+       case "e" : vowelsNumber ++;
+       Break;
+       case "i" : vowelsNumber ++;
+       Break;
+       case "o" : vowelsNumber ++;
+       Break;
+       case "u" : vowelsNumber ++;
+       Break;
+       case "y" : vowelsNumber ++;
+       Break;
+       case " " : wordsNumber += 1;
+       default : Break;
+   END_SWITCH
+   sentenceLength ++;
+   END_FOR
+   Read(sentenceLength);
+   Read(vowelsNumber);
+   Read(wordsNumber);
+   Write("Sentence Length is" + sentenceLength);
+   Write("The number of vowels is" + vowelsNumber);
+   Write("The number of words is" + wordsNumber);
+   
+END
